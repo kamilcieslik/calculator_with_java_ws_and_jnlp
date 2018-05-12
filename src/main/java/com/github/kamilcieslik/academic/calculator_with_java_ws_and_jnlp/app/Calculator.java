@@ -1,6 +1,6 @@
 package com.github.kamilcieslik.academic.calculator_with_java_ws_and_jnlp.app;
 
-import com.github.kamilcieslik.academic.calculator_with_java_ws_and_jnlp.javafx_controller.CalculatorController;
+import com.github.kamilcieslik.academic.calculator_with_java_ws_and_jnlp.javafx.controller.CalculatorController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;

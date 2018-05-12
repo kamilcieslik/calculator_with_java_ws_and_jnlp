@@ -1,6 +1,6 @@
-package com.github.kamilcieslik.academic.calculator_with_java_ws_and_jnlp.javafx_controller;
+package com.github.kamilcieslik.academic.calculator_with_java_ws_and_jnlp.javafx.controller;
 
-import com.github.kamilcieslik.academic.calculator_with_java_ws_and_jnlp.ButtonSoundPlayer;
+import com.github.kamilcieslik.academic.calculator_with_java_ws_and_jnlp.javafx.ButtonSoundPlayer;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -144,7 +144,8 @@ public class CalculatorController implements Initializable {
     private void playButtonAudio() {
         if (isSoundOn)
             new Thread(() -> {
-                buttonSoundPlayer = new ButtonSoundPlayer("src/main/resources/mp3/button_sound.mp3");
+                buttonSoundPlayer = new ButtonSoundPlayer(getClass().getClassLoader()
+                        .getResourceAsStream("mp3/button_sound.mp3"));
                 buttonSoundPlayer.play();
                 try {
                     Thread.sleep(1000);

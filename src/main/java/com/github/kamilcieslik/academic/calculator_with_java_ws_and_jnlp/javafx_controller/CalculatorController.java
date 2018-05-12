@@ -83,30 +83,24 @@ public class CalculatorController implements Initializable {
                         "|^-?[0-9]+(\\.[0-9]+)?\\s[+\\-/*]\\s-?[0][0-9]$")) {
             if (textFieldCalculations.getText().equals("") ||
                     (textFieldCalculations.getText() + button.getText())
-                            .matches("^[0-9]+(\\.[0-9]+)?$")) {
+                            .matches("^[0-9]+(\\.[0-9]+)?$"))
                 textFieldCalculations.setText(textFieldCalculations.getText() + button.getText());
-                System.out.println("1");
-            } else if ((textFieldCalculations.getText()
+            else if ((textFieldCalculations.getText()
                     + button.getText())
-                    .matches("^-?[0-9]+(\\.[0-9]+)?\\s[+\\-/*]?(\\s-?[0-9]+(\\.[0-9]+)?)?$")) {
+                    .matches("^-?[0-9]+(\\.[0-9]+)?\\s[+\\-/*]?(\\s-?[0-9]+(\\.[0-9]+)?)?$"))
                 textFieldCalculations.setText(textFieldCalculations.getText() + button.getText());
-                System.out.println("2");
-            } else if ((textFieldCalculations.getText()
+            else if ((textFieldCalculations.getText()
                     + " " + button.getText())
-                    .matches("^-?[0-9]+(\\.[0-9]+)?\\s[+\\-/*]?(\\s-?[0-9]+(\\.[0-9]+)?)?$")) {
+                    .matches("^-?[0-9]+(\\.[0-9]+)?\\s[+\\-/*]?(\\s-?[0-9]+(\\.[0-9]+)?)?$"))
                 textFieldCalculations.setText(textFieldCalculations.getText() + " " + button.getText());
-                System.out.println("3");
-            } else if ((textFieldCalculations.getText()
+            else if ((textFieldCalculations.getText()
                     + button.getText())
-                    .matches("^[+\\-/*](\\s-?[0-9]+(\\.[0-9]+)?)?$")) {
+                    .matches("^[+\\-/*](\\s-?[0-9]+(\\.[0-9]+)?)?$"))
                 textFieldCalculations.setText(textFieldCalculations.getText() + button.getText());
-                System.out.println("4");
-            } else if ((textFieldCalculations.getText()
+            else if ((textFieldCalculations.getText()
                     + " " + button.getText())
-                    .matches("^[+\\-/*](\\s-?[0-9]+(\\.[0-9]+)?)?$")) {
+                    .matches("^[+\\-/*](\\s-?[0-9]+(\\.[0-9]+)?)?$"))
                 textFieldCalculations.setText(textFieldCalculations.getText() + " " + button.getText());
-                System.out.println("5");
-            }
         }
     }
 

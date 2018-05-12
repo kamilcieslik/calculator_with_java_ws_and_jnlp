@@ -27,8 +27,9 @@ public class Calculator extends Application {
             primaryStage.setTitle("Calculator");
             primaryStage.getIcons().add(new Image("/img/app_icon.png"));
             primaryStage.setWidth(345);
-            primaryStage.setHeight(459);
-            BorderlessScene borderlessScene = new BorderlessScene(primaryStage, StageStyle.UNDECORATED, root, 345, 459);
+            primaryStage.setHeight(465);
+            BorderlessScene borderlessScene = new BorderlessScene(primaryStage, StageStyle.UNDECORATED, root,
+                    345, 465);
             borderlessScene.removeDefaultCSS();
             borderlessScene.setResizable(false);
             primaryStage.setScene(borderlessScene);

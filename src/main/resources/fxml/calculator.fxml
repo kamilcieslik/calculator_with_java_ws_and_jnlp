@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="vBoxCalculator" alignment="TOP_CENTER" maxHeight="459.0" maxWidth="345.0" minHeight="-Infinity"
+      minWidth="-Infinity" prefHeight="459.0" prefWidth="345.0"
+      style="-fx-background-color: #404040; -fx-border-color: black; -fx-border-width: 2;"
+      xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.github.kamilcieslik.academic.calculator_with_java_ws_and_jnlp.javafx_controller.CalculatorController">
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+    </padding>
+    <Label text="CASIO" textFill="WHITE">
+        <font>
+            <Font name="System Bold" size="20.0"/>
+        </font>
+    </Label>
+    <Label text="ELECTRONIC CALCULATOR" textFill="#ff00f2">
+        <font>
+            <Font name="System Italic" size="16.0"/>
+        </font>
+        <VBox.margin>
+            <Insets top="-5.0"/>
+        </VBox.margin>
+    </Label>
+    <Label text="HL-815L" textFill="WHITE">
+        <font>
+            <Font name="System Italic" size="12.0"/>
+        </font>
+    </Label>
+    <TextField fx:id="textFieldCalculations"
+               style="-fx-background-radius: 0; -fx-effect: innershadow( three-pass-box , rgba(0,0,0,0.7) , 15, 0.0 , 0 , 2 );"
+               VBox.vgrow="NEVER">
+        <VBox.margin>
+            <Insets top="10.0"/>
+        </VBox.margin>
+    </TextField>
+    <VBox prefHeight="200.0" prefWidth="321.0" spacing="5.0"
+          style="-fx-effect: innershadow( three-pass-box , rgba(0,0,0,0.7) , 15, 0.0 , 0 , 2 );" VBox.vgrow="ALWAYS">
+        <VBox.margin>
+            <Insets top="10.0"/>
+        </VBox.margin>
+        <HBox maxHeight="60.0" prefHeight="150.0" prefWidth="200.0" spacing="5.0">
+            <Button maxHeight="60.0" maxWidth="120.0" minWidth="125.0" mnemonicParsing="false"
+                    onAction="#buttonSound_onAction" style="-fx-background-radius: 0; -fx-background-color: #268798;"
+                    HBox.hgrow="ALWAYS">
+                <graphic>
+                    <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                        <Image url="@../img/sound_on.png"/>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button maxHeight="60.0" maxWidth="120.0" minWidth="125.0" mnemonicParsing="false"
+                    onAction="#buttonOff_onAction" style="-fx-background-radius: 0; -fx-background-color: #268798;"
+                    text="OFF" HBox.hgrow="ALWAYS"/>
+            <Button maxHeight="60.0" maxWidth="60.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false"
+                    onAction="#buttonOperationSign_onAction"
+                    style="-fx-background-radius: 0; -fx-background-color: #268798;" text="/" HBox.hgrow="ALWAYS"/>
+        </HBox>
+        <HBox>
+            <VBox.margin>
+                <Insets left="1.0" top="1.0"/>
+            </VBox.margin>
+            <VBox maxWidth="60.0" minWidth="60.0" prefHeight="255.0" prefWidth="60.0" spacing="5.0">
+                <HBox.margin>
+                    <Insets right="5.0"/>
+                </HBox.margin>
+                <Button maxHeight="125.0" maxWidth="60.0" minHeight="125.0" minWidth="60.0" mnemonicParsing="false"
+                        onAction="#buttonClear_onAction"
+                        style="-fx-background-radius: 0; -fx-background-color: #268798;" text="C"/>
+                <Button maxHeight="125.0" maxWidth="60.0" minHeight="125.0" minWidth="60.0" mnemonicParsing="false"
+                        onAction="#buttonClearMemory_onAction"
+                        style="-fx-background-radius: 0; -fx-background-color: #268798;" text="AC">
+                    <VBox.margin>
+                        <Insets/>
+                    </VBox.margin>
+                </Button>
+            </VBox>
+            <VBox spacing="5.0">
+                <HBox minHeight="60.0" spacing="5.0">
+                    <Button maxHeight="60.0" maxWidth="60.0" minWidth="60.0" mnemonicParsing="false"
+                            onAction="#buttonNumber_onAction" style="-fx-background-radius: 0;" text="7"/>
+                    <Button maxHeight="60.0" maxWidth="60.0" minWidth="60.0" mnemonicParsing="false"
+                            onAction="#buttonNumber_onAction" style="-fx-background-radius: 0;" text="8"/>
+                    <Button maxHeight="60.0" maxWidth="60.0" minWidth="60.0" mnemonicParsing="false"
+                            onAction="#buttonNumber_onAction" style="-fx-background-radius: 0;" text="9"/>
+                    <Button maxHeight="60.0" maxWidth="60.0" minWidth="60.0" mnemonicParsing="false"
+                            onAction="#buttonOperationSign_onAction"
+                            style="-fx-background-radius: 0; -fx-background-color: #268798;" text="*"/>
+                </HBox>
+                <HBox minHeight="60.0" spacing="5.0">
+                    <Button maxHeight="60.0" maxWidth="60.0" minWidth="60.0" mnemonicParsing="false"
+                            onAction="#buttonNumber_onAction" style="-fx-background-radius: 0;" text="4"/>
+                    <Button maxHeight="60.0" maxWidth="60.0" minWidth="60.0" mnemonicParsing="false"
+                            onAction="#buttonNumber_onAction" style="-fx-background-radius: 0;" text="5"/>
+                    <Button maxHeight="60.0" maxWidth="60.0" minWidth="60.0" mnemonicParsing="false"
+                            onAction="#buttonNumber_onAction" style="-fx-background-radius: 0;" text="6"/>
+                    <Button maxHeight="60.0" maxWidth="60.0" minWidth="60.0" mnemonicParsing="false"
+                            onAction="#buttonOperationSign_onAction"
+                            style="-fx-background-radius: 0; -fx-background-color: #268798;" text="-"/>
+                </HBox>
+                <HBox minHeight="60.0" spacing="5.0">
+                    <Button maxHeight="60.0" maxWidth="60.0" minWidth="60.0" mnemonicParsing="false"
+                            onAction="#buttonNumber_onAction" style="-fx-background-radius: 0;" text="1"/>
+                    <Button maxHeight="60.0" maxWidth="60.0" minWidth="60.0" mnemonicParsing="false"
+                            onAction="#buttonNumber_onAction" style="-fx-background-radius: 0;" text="2"/>
+                    <Button maxHeight="60.0" maxWidth="60.0" minWidth="60.0" mnemonicParsing="false"
+                            onAction="#buttonNumber_onAction" style="-fx-background-radius: 0;" text="3"/>
+                    <Button maxHeight="60.0" maxWidth="60.0" minWidth="60.0" mnemonicParsing="false"
+                            onAction="#buttonOperationSign_onAction"
+                            style="-fx-background-radius: 0; -fx-background-color: #268798;" text="+"/>
+                </HBox>
+                <HBox minHeight="60.0" spacing="5.0">
+                    <Button maxHeight="60.0" maxWidth="60.0" minWidth="60.0" mnemonicParsing="false"
+                            onAction="#buttonNumber_onAction" style="-fx-background-radius: 0;" text="0"/>
+                    <Button maxHeight="60.0" maxWidth="60.0" minWidth="60.0" mnemonicParsing="false"
+                            onAction="#buttonDot_onAction"
+                            style="-fx-background-radius: 0; -fx-background-color: #268798;" text="."/>
+                    <Button maxHeight="60.0" maxWidth="60.0" minWidth="125.0" mnemonicParsing="false"
+                            onAction="#buttonEqualSign_onAction"
+                            style="-fx-background-radius: 0; -fx-background-color: #268798;" text="="/>
+                </HBox>
+            </VBox>
+        </HBox>
+    </VBox>
+</VBox>
